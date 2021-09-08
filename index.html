@@ -1,13 +1,64 @@
-<html lang = "zh">
+<!DOCTYPE html>
+<html lang = "en">
 <head>
-
     <meta charset = "UTF-8">
-    <title>nothing</title>
+    <title>Larry's Website</title>
+
+    <!-- import the link of font-family (Courgette)  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link href="MyCss/main.css" rel="stylesheet">
     
+
 </head>
 
 <body>
-nothing.
+
+    <div id= "menu">
+        <div id= "typing_area">
+            <h1 id= "typing"></h1>
+        </div>
+        <div id= "switch_area">
+            <div class= "switch_box"><p>About Me</p></div>
+            <div class= "switch_box"><p>Experiences</p></div>
+            <div class= "switch_box"><p>Projects</p></div>
+            <div class= "switch_box"><p>Awards</p></div>
+        </div>
+    </div>    
+    
+
+    
+    <script>
+        const welcomeLine = "Hello! I'm Larry Chen, studying in NCKU.\nWelcome to my personal website!";
+        const tag = document.getElementById("typing");
+        let index = 0;
+        
+
+        function typing(){
+            if (index < welcomeLine.length){
+                tag.innerHTML += welcomeLine.charAt(index);
+                index++;
+                if (welcomeLine.charAt(index) === ' '){
+                    // The next is whitespace. Quickly pass it!
+                    setTimeout(typing.bind(this), 10);
+                }else if (welcomeLine.charAt(index) === '\n'){
+                    // The next is to end line
+                    tag.innerHTML += "<br>"; 
+                    index++;
+                    setTimeout(typing.bind(this), 20);
+                }else{
+                    setTimeout(typing.bind(this), 60);
+                }
+            }
+        }
+        
+        typing();
+
+    </script>
+
+
 </body>
 
 </html>

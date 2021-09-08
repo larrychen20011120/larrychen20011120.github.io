@@ -1,0 +1,77 @@
+/* Topic and introduce -> main font (Courgette) -> class: topic
+*/
+.topic{
+    font-family: 'Lobster', cursive;
+}
+
+/* backgroud setting */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu{
+    width: 100%;
+    height: 90vh;
+    background-color: #f2eadd;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#typing_area{
+    width: 90%;
+    height: 55%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#switch_area{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.switch_box:nth-child(1){
+    background-color: #dd5f32;
+}
+.switch_box:nth-child(2){
+    background-color: #e19d29;
+}
+.switch_box:nth-child(3){
+    background-color: #92b06a;
+}
+.switch_box:nth-child(4){
+    background-color: #4298b5;
+}
+
+.switch_box{
+    display: inline;
+    width: 15vw;
+    height: 15vw;
+    margin: 0vw 1.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+}
+
+.switch_box:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+#typing{
+    font-size: 480%;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    display: flex;
+    justify-content: flex-start;
+}
