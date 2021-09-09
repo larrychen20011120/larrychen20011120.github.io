@@ -63,6 +63,11 @@ body{
     font-weight: bold;
 }
 
+.switch_box > img{
+    width: auto;
+    height: 40%;
+}
+
 .switch_box:hover{
     cursor: pointer;
     opacity: 80%;
