@@ -21,12 +21,53 @@
             <h1 id= "typing"></h1>
         </div>
         <div id= "switch_area">
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263058.png" alt= "About Me"></div>
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263062.png" alt= "Experience"></div>
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263145.png" alt= "Projects"></div>
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263056.png" alt= "Awards"></div>
+
+            <a class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263058.png" alt= "Profile"></a>
+            <a class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263062.png" alt= "Experience"></a>
+            <a class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263145.png" alt= "Projects"></a>
+            <a class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263056.png" alt= "Awards"></a>
+        
         </div>
-    </div>    
+    </div>   
+    
+    <div id= "Profile">
+        <div class= "left">
+            <img src= "Image/me.jpg" id= "Myphoto">
+        </div>
+        <div class= "right">
+            <ul>
+                <li>Brief Introduction</li>
+                    <ul>
+                        <li>A student majors in computer science</li>
+                        <li>A beginner of font-end technics</li>
+                        <li>Know a little bit of java, python and c</li>
+                        <li>Have great curiousity about learning cool things</li>
+                    </ul>
+                <li>Hobbies</li>
+                    <ul>
+                        <li>Love playing table tennis and badminton</li>
+                        <li>Watch cool and meaningful movies</li>    
+                    </ul>
+                <li>Future Expectations</li>
+                    <ul>
+                        <li>Learn more about back-end technics and machine learning</li>
+                        <li>Successfully gain my bachlor degree</li>
+                    </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div id= "Experience">
+        
+    </div>
+
+    <div id= "Projects">
+        
+    </div>
+
+    <div id= "Awards">
+        
+    </div>
     
 
     <!-- The animation of typing words. --> 
@@ -47,9 +88,9 @@
                     // The next is to end line
                     tag.innerHTML += "<br>"; 
                     index++;
-                    setTimeout(typing.bind(this), 20);
+                    setTimeout(typing.bind(this), 10);
                 }else{
-                    setTimeout(typing.bind(this), 60);
+                    setTimeout(typing.bind(this), 50);
                 }
             }
         }
@@ -77,6 +118,10 @@
                 switch_box[i].innerHTML = imghtml;
                 switch_box[i].style.opacity = "100%";
                 switch_box[i].style.cursor = "default";
+            }
+
+            switch_box[i].onclick = function(){
+                switch_box[i].href = "#" + alt;
             }
         }
         

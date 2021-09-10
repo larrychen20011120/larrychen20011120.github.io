@@ -61,6 +61,7 @@ body{
     font-size: xx-large;
     font-family: 'Lobster', cursive;
     font-weight: bold;
+    color:black;
 }
 
 .switch_box > img{
@@ -74,4 +75,54 @@ body{
     font-family: 'Lobster', cursive;
     display: flex;
     justify-content: flex-start;
+}
+
+#Profile{
+    width: 100%;
+    height: 100vh;
+    background-color: #dd5f32;
+    opacity: 70%;
+    margin: 0px;
+    padding: 0px;
+}
+#Profile > .left{
+    width: 40%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#Profile > .right{
+    width: 60%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#Myphoto{
+    width: 60%;
+    height: auto;
+    border-radius: 20%;
+}
+
+#Experience{
+    width: 100%;
+    height: 100vh;
+    background-color: #e19d29;
+    opacity: 70%;
+}
+#Projects{
+    width: 100%;
+    height: 200vh;
+    background-color: #92b06a;
+    opacity: 70%;
+}
+#Awards{
+    width: 100%;
+    height: 100vh;
+    background-color: #4298b5;
+    opacity: 70%;
 }
