@@ -21,15 +21,15 @@
             <h1 id= "typing"></h1>
         </div>
         <div id= "switch_area">
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263058.png"></div>
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263062.png"></div>
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263145.png"></div>
-            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263056.png"></div>
+            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263058.png" alt= "About Me"></div>
+            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263062.png" alt= "Experience"></div>
+            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263145.png" alt= "Projects"></div>
+            <div class= "switch_box"><img src= "https://image.flaticon.com/icons/png/512/263/263056.png" alt= "Awards"></div>
         </div>
     </div>    
     
 
-    
+    <!-- The animation of typing words. --> 
     <script>
         const welcomeLine = "Hello! I'm Larry Chen, studying in NCKU.\nWelcome to my personal website!";
         const tag = document.getElementById("typing");
@@ -58,6 +58,29 @@
 
     </script>
 
+    <!-- Interactions of switch box. -->
+    <script>
+        let switch_box = document.getElementsByClassName('switch_box');
+        let image = document.querySelectorAll('.switch_box > img');
+        
+        for (let i = 0; i < 4; i++){
+            let alt = image[i].alt;
+            let imghtml = switch_box[i].innerHTML;
+
+            switch_box[i].onmouseover = function(){
+                switch_box[i].innerHTML = "<p>" + alt + "</p>";
+                switch_box[i].style.opacity = "70%";
+                switch_box[i].style.cursor = "pointer";
+            }
+            
+            switch_box[i].onmouseleave = function(){
+                switch_box[i].innerHTML = imghtml;
+                switch_box[i].style.opacity = "100%";
+                switch_box[i].style.cursor = "default";
+            }
+        }
+        
+    </script>
 
 </body>
 

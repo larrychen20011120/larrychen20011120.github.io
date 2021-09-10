@@ -68,11 +68,6 @@ body{
     height: 40%;
 }
 
-.switch_box:hover{
-    cursor: pointer;
-    opacity: 80%;
-}
-
 #typing{
     font-size: 480%;
     font-weight: bold;
