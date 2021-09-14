@@ -1,6 +1,6 @@
 /* setting of the list */
 .outlist{
-    padding: 5vw;
+    padding: 7vw;
 }
 
 .outlist > li{
@@ -113,7 +113,7 @@ body{
 }
 
 #Myphoto{
-    width: 70%;
+    width: 60%;
     height: auto;
     border-radius: 20%;
 }
@@ -122,23 +122,65 @@ body{
     width: 100%;
     height: 100vh;
     background-color: #e19d29;
-    opacity: 70%;
 }
 #Projects{
     width: 100%;
     height: 200vh;
     background-color: #92b06a;
-    opacity: 70%;
 }
+/*
+.project_box{
+    background-color: #bbded6; 
+}
+*/
+
 #Awards{
     width: 100%;
     height: 100vh;
     background-color: #4298b5;
+}
+#Awards img{
+    width: auto;
+    height: 50vh;
+}
+#Awards > .left{
+    float: left;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#Awards > .right{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     opacity: 70%;
+}
+
+.honor_box{
+    width: 70%;
+    height: 13%;
+    background-color: #8ac6d1;
+    margin: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.honor_box > p{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: larger;
+    margin: 0px 0px 1vh;
+    padding: 0px;
 }
 
 #End{
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     background-color: #f2eadd;
 }
