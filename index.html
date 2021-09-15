@@ -72,7 +72,17 @@
     </div>
 
     <div id= "Experience">
-        
+        <div class= "timeline"></div>
+        <div class= "timepoint"></div>
+        <div class= "timepoint"></div>
+        <div class= "timepoint"></div>
+        <div class= "timepoint"></div>
+        <div class= "timepoint"></div>
+        <div class= "experience_box"></div>
+        <div class= "experience_box"></div>
+        <div class= "experience_box"></div>
+        <div class= "experience_box"></div>
+        <div class= "experience_box"></div>
     </div>
 
     <div id= "Projects">
@@ -110,10 +120,27 @@
         </div>
     </div>
 
-    <div id= "End">
+    <!-- Initialize the position of timepoint and cards-->
+    <script>
+        let timepoint = document.getElementsByClassName("timepoint");
+        let experience_box = document.getElementsByClassName("experience_box");
+        const firstTop = 5; // percentage of top
+        const rowPosition = 28, columnPosition = 2;
 
-    </div>
-    
+        // length of timepoint = length of experience_box
+        for (let i = 0; i < timepoint.length; i++){
+            timepoint[i].style.top = (firstTop + 7 * i) + "vw";
+            experience_box[i].style.top = (columnPosition + 7 * i) + "vw";
+
+            if (i % 2 == 0){
+                experience_box[i].style.left = rowPosition + "vw";
+            }else{
+                experience_box[i].style.right = (rowPosition - 1.2)+ "vw";
+            }
+        }
+
+
+    </script>
 
     <!-- The animation of typing words. --> 
     <script>

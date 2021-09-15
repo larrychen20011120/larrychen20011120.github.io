@@ -23,7 +23,7 @@ body{
 #menu{
     width: 100%;
     height: 90vh;
-    background-color: #f2eadd;
+    background-color: #F0CEA0;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -50,13 +50,13 @@ body{
     background-color: #dd5f32;
 }
 .switch_box:nth-child(2){
-    background-color: #e19d29;
+    background-color: #4298b5;
 }
 .switch_box:nth-child(3){
     background-color: #92b06a;
 }
 .switch_box:nth-child(4){
-    background-color: #4298b5;
+    background-color: #ecb83c;
 }
 
 .switch_box{
@@ -150,8 +150,36 @@ body{
 #Experience{
     width: 100%;
     height: 100vh;
-    background-color: #e19d29;
+    background-color: #4298b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+.timeline{
+    position: absolute;
+    top: 2vw;
+    left: 50vw;
+    width: 0.4vw;
+    height: 90%;
+    background-color: gray;
+}
+.timepoint{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    left: 49.2vw;
+    border-radius: 50%;
+    background-color: gray;
+}
+.experience_box{
+    position: absolute;
+    width: 20vw;
+    height: 7vw;
+    background-color: gray;
+}
+
+
 #Projects{
     width: 100%;
     height: 100vh;
@@ -182,7 +210,7 @@ body{
 #Awards{
     width: 100%;
     height: 100vh;
-    background-color: #4298b5;
+    background-color: #f7f5f1;
 }
 #Awards img{
     width: auto;
@@ -204,13 +232,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #8ac6d1;
+    background-color: #ecb83c;
 }
 
 .honor_box{
     width: 70%;
     height: 13%;
-    background-color: #8ac6d1;
+    background-color: #ecb83c;
     border-radius: 5px;
     margin: 5vh;
     display: flex;
@@ -232,8 +260,3 @@ body{
     border-style: solid;
 }
 
-#End{
-    width: 100%;
-    height: 30vh;
-    background-color: #f2eadd;
-}
