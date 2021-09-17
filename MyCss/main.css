@@ -2,6 +2,9 @@
 a {
     text-decoration:none;
 }
+a:link, a:visited{
+    color: black;
+}
 
 /* setting of the list */
 .outlist{
@@ -77,6 +80,9 @@ body{
     font-family: 'Lobster', cursive;
     font-weight: bold;
     color:black;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
 }
 
 .switch_box > img{
@@ -229,9 +235,20 @@ body{
     flex-direction: column;
 }
 .content{
+    width: 90%;
+    height: 90%;
     display: none;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+.content > .image{
+    width: 40%;
+    height: auto;
+    float: left;
+}
+.image > img{
+    width: 80%;
+    height: auto;
 }
 
 .title{
@@ -243,10 +260,13 @@ body{
 .discription{
     font-family: 'Balsamiq Sans', cursive;
     font-size: larger;
+    width: 60%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    float: left;
 }
 
 #Awards{
