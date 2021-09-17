@@ -1,3 +1,8 @@
+/* Take out underline of a tag */
+a {
+    text-decoration:none;
+}
+
 /* setting of the list */
 .outlist{
     padding: 7vw;
@@ -159,30 +164,51 @@ body{
 .timeline{
     position: absolute;
     top: 2vw;
-    left: 50vw;
-    width: 0.4vw;
-    height: 90%;
-    background-color: gray;
+    /*** 
+        left = 50 - 1/2 * width 
+    ***/
+    left: 49.7vw;
+    width: 0.6vw;
+    height: 90vh;
+    background-color: #a5dff9;
+    border-radius: 3px;
 }
 .timepoint{
     position: absolute;
     width: 2vw;
     height: 2vw;
-    left: 49.2vw;
+    /*** 
+        left = 50 - 1/2 * width 
+    ***/
+    left: 49vw;
     border-radius: 50%;
-    background-color: gray;
+    background-color: #1F6ED4;
 }
 .experience_box{
     position: absolute;
-    width: 20vw;
+    width: 26vw;
     height: 7vw;
-    background-color: gray;
+    background-color: #a5dff9;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1F6ED4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.experience_box > p{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: larger;
+    margin: 0px 0px 1vh;
+    padding: 0px;
 }
 
 
 #Projects{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: #92b06a;
     display: flex;
     justify-content: center;
@@ -199,12 +225,28 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+.content{
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .title{
     font-family: 'Lobster', cursive;
     font-size: xx-large;
     font-weight: bold;
+}
+
+.discription{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #Awards{
@@ -214,11 +256,11 @@ body{
 }
 #Awards img{
     width: auto;
-    height: 50vh;
+    height: 30vh;
 }
 #Awards > .left{
     float: left;
-    width: 55%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -227,7 +269,7 @@ body{
 }
 #Awards > .right{
     float: left;
-    width: 45%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -260,3 +302,59 @@ body{
     border-style: solid;
 }
 
+footer{
+    width: 100%;
+    height: 30vh;
+}
+footer p, footer h2{
+    font-family: 'Balsamiq Sans', cursive;
+    margin: 0px 0.5vw;
+}
+footer .left{
+    width: 70%;
+    height: 100%;
+    background-color: #ecb83c;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ref_topic{
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+.reference{
+    width: 60%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reference:hover{
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.reference > img {
+    height: 80%;
+    width: auto;
+}
+
+footer > .right > img{
+    width: auto;
+    height: 40%;
+}
+footer .right{
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color: #f7f5f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

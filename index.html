@@ -19,6 +19,7 @@
 <body>
 
     <div id= "menu">
+
         <div id= "typing_area">
             <h1 id= "typing"></h1>
         </div>
@@ -73,29 +74,74 @@
 
     <div id= "Experience">
         <div class= "timeline"></div>
+
         <div class= "timepoint"></div>
         <div class= "timepoint"></div>
         <div class= "timepoint"></div>
         <div class= "timepoint"></div>
         <div class= "timepoint"></div>
-        <div class= "experience_box"></div>
-        <div class= "experience_box"></div>
-        <div class= "experience_box"></div>
-        <div class= "experience_box"></div>
-        <div class= "experience_box"></div>
+        
+        <div class= "experience_box">
+            <p>TNFSH Robot Club</p>
+            <p> - Club Member</p>
+        </div>
+        <div class= "experience_box">
+            <p>Industrial Robot Compitition</p>
+            <p> - Team Member</p>
+        </div>
+        <div class= "experience_box">
+            <p>National High School Physics<br>Experiment Competition</p>
+            <p> - Team Leader</p>
+        </div>
+        <div class= "experience_box">
+            <p>National Campus Cup Elite<br>Investment Competition</p>
+        </div>
+        <div class= "experience_box">
+            <p>University Verification Challenge<br> Confirmation CN</p>
+        </div>
     </div>
 
     <div id= "Projects">
         <div class= "project_box">
             <p class= "title">Personal Website (This)</p>
+            <div class= "content">
+                <div class= "discription">
+                    <p>
+                        This is my first project about font-end.<br>
+                        It is only writen by html, css and javascript without any framework.
+                    </p>
+                    <p>
+                        It is done by github page service. This website tell you some details of me, Larry.
+                        You can know my personality, experiences and projects I've created before.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class= "project_box">
             <p class= "title">Vocabuilder</p>
+            <div class= "content">
+
+                <div class= "discription">
+                    <p>
+                        This is a project writen by java
+                    </p>
+                </div>
+                    
+            </div>
         </div>
 
         <div class= "project_box">
             <p class= "title">Bump Jump Game</p>
+            <div class= "content">
+
+                <div class= "discription">
+                    <p>
+                        This is a project writen by java
+                    </p>
+                </div>
+                    
+            </div>
         </div>
 
     </div>
@@ -120,22 +166,52 @@
         </div>
     </div>
 
+    <footer>
+        
+        <div class= "left">
+            <div class= "ref_topic">
+                <h2>References : </h2>
+            </div>
+            <a href= "https://colordrop.io/" class= "reference">
+                <img src= "https://www.saashub.com/images/app/service_logos/90/6d230507a9f8/large.png?1571172734">
+                <p>ColorDrop</p>
+            </a>
+            <a href= "https://www.flaticon.com/" class= "reference">
+                <img src= "https://cdn-icons-png.flaticon.com/512/4478/4478871.png">
+                <p>Flaticon</p>
+            </a>
+            <a href= "https://fonts.google.com/" class= "reference">
+                <img src= "https://logos-world.net/wp-content/uploads/2021/03/Google-Fonts-Logo.png">
+                <p>Google Fonts</p>
+            </a>
+        </div>
+
+        <div class= "right">
+            <img src= "Image/logo.png" alt= "logo">
+            <h2>Larry's Website</h2>
+        </div>
+    </footer>
+
     <!-- Initialize the position of timepoint and cards-->
     <script>
         let timepoint = document.getElementsByClassName("timepoint");
         let experience_box = document.getElementsByClassName("experience_box");
-        const firstTop = 5; // percentage of top
-        const rowPosition = 28, columnPosition = 2;
+
+        const timePointInit = 5, horizontalDiff = 5;
+        // 
+        const verticalDiff = 40 / timepoint.length;
+        const box_hieght = 7, box_width = 26;
+        const point_height = 2;
 
         // length of timepoint = length of experience_box
         for (let i = 0; i < timepoint.length; i++){
-            timepoint[i].style.top = (firstTop + 7 * i) + "vw";
-            experience_box[i].style.top = (columnPosition + 7 * i) + "vw";
+            timepoint[i].style.top = (timePointInit + verticalDiff * i) + "vw";
+            experience_box[i].style.top = (timePointInit + point_height / 2 - box_hieght / 2 + verticalDiff * i) + "vw";
 
             if (i % 2 == 0){
-                experience_box[i].style.left = rowPosition + "vw";
+                experience_box[i].style.left = (50 - box_width - horizontalDiff) + "vw";
             }else{
-                experience_box[i].style.right = (rowPosition - 1.2)+ "vw";
+                experience_box[i].style.right = (50 - box_width - horizontalDiff) + "vw";
             }
         }
 
@@ -148,7 +224,6 @@
         const tag = document.getElementById("typing");
         let index = 0;
         
-
         function typing(){
             if (index < welcomeLine.length){
                 tag.innerHTML += welcomeLine.charAt(index);
@@ -171,10 +246,12 @@
 
     </script>
 
-    <!-- Interactions of switch box. -->
+    <!-- Interactions of switch box and project box -->
     <script>
         let switch_box = document.getElementsByClassName('switch_box');
         let image = document.querySelectorAll('.switch_box > img');
+        let project_content = document.getElementsByClassName('content');
+        let project_box = document.getElementsByClassName('project_box');
         
         for (let i = 0; i < 4; i++){
             let alt = image[i].alt;
@@ -194,6 +271,19 @@
 
             switch_box[i].onclick = function(){
                 switch_box[i].href = "#" + alt;
+            }
+        }
+
+        for (let i = 0; i < project_box.length; i++){
+
+            project_box[i].onmouseover = function(){
+                project_content[i].style.display = "flex";
+                project_box[i].style.height = "50vh";
+            }
+
+            project_box[i].onmouseleave = function(){
+                project_content[i].style.display = "none";
+                project_box[i].style.height = "10%"
             }
         }
         
