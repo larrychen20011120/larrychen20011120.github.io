@@ -6,9 +6,15 @@ a:link, a:visited{
     color: black;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* setting of the list */
 .outlist{
-    padding: 7vw;
+    margin: 0px 5vw;
+    padding: 0px 7vw;
 }
 
 .outlist > li{
@@ -22,18 +28,10 @@ a:link, a:visited{
     padding: 0.8vh 0px;
 }
 
-/* backgroud setting */
-body{
-    margin: 0px;
-    padding: 0px;
-}
-
 #menu{
     width: 100%;
     height: 90vh;
     background-color: #F0CEA0;
-    margin: 0px;
-    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,16 +40,16 @@ body{
 
 #typing_area{
     width: 90%;
-    height: 55%;
+    height: 40%;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 #switch_area{
     width: 90%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
+    height: 60%;
+    align-items: center;
 }
 
 .switch_box:nth-child(1){
@@ -68,10 +66,10 @@ body{
 }
 
 .switch_box{
-    display: inline;
+    float: left;
     width: 15vw;
     height: 15vw;
-    margin: 0vw 1.5vw;
+    margin: 0.5vh 2vw;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -150,12 +148,17 @@ body{
     width: 60%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+.social_media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .social_media img{
-    height: 100%;
-    width: auto;
-    display: inline;
+    height: auto;
+    width: 35%;
 }
 
 #Experience{
@@ -193,7 +196,7 @@ body{
 .experience_box{
     position: absolute;
     width: 26vw;
-    height: 7vw;
+    height: 8vw;
     background-color: #a5dff9;
     border-radius: 8px;
     border-style: solid;
@@ -377,4 +380,89 @@ footer .right{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/***
+RWD 
+***/
+@media screen and (max-width: 800px) {
+    
+    #menu{
+        height: 120vh;
+    }
+    #typing_area{
+        height: 40%;
+    }
+    #switch_area{
+        height: 55%;
+    }
+
+    #typing{
+        font-size: xx-large;
+    }
+
+    .switch_box{
+        width: 30vw;
+        height: 30vw;
+    }
+    #Profile{
+        height: 180vh;
+    }
+    #Profile > .right{
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+    }
+    #Profile > .left{
+        height: 50%;
+        width: 100%;
+    }
+    .social_media{
+        margin-bottom: 1vh;
+    }
+    .self_img, .social_media{
+        justify-content: center;
+    }
+
+    .timeline, .timepoint{
+        display: none;
+    }
+    .experience_box{
+        width: 60vw;
+    }
+
+    #Awards{
+        height: 200vh;
+    }
+    #Awards > .left{
+        height: 50%;
+        width: 100%;
+    }
+    #Awards > .right{
+        height: 50%;
+        width: 100%;
+    }
+    .honor_box{
+        width: 90%;
+    }
+    .honor_box > p{
+        font-size: medium;
+    }
+    .title{
+        font-size: xx-large;
+    }
+
+    footer > .left{
+        width: 100%;
+        height: 50%;
+    }
+    footer > .right{
+        width: 100%;
+        height: 50%;
+    }
+
+    footer{
+        height: 60vh;
+    }
+    
 }
