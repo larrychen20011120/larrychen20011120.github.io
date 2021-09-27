@@ -49,6 +49,8 @@ a:link, a:visited{
 #switch_area{
     width: 90%;
     height: 60%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -69,7 +71,7 @@ a:link, a:visited{
     float: left;
     width: 15vw;
     height: 15vw;
-    margin: 0.5vh 2vw;
+    margin: auto;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -148,13 +150,11 @@ a:link, a:visited{
     width: 60%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .social_media a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 }
 .social_media img{
     height: auto;
@@ -385,16 +385,17 @@ footer .right{
 /***
 RWD 
 ***/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     
     #menu{
-        height: 120vh;
+        height: 40vh;
     }
     #typing_area{
-        height: 40%;
+        height: 80%;
     }
     #switch_area{
         height: 55%;
+        display: none;
     }
 
     #typing{
@@ -406,15 +407,15 @@ RWD
         height: 30vw;
     }
     #Profile{
-        height: 180vh;
+        height: 200vh;
     }
     #Profile > .right{
-        height: 50%;
+        height: 40%;
         width: 100%;
-        justify-content: center;
+        flex-direction: column;
     }
     #Profile > .left{
-        height: 50%;
+        height: 60%;
         width: 100%;
     }
     .social_media{
@@ -429,6 +430,7 @@ RWD
     }
     .experience_box{
         width: 60vw;
+        margin: 5% 0px ;
     }
 
     #Awards{
