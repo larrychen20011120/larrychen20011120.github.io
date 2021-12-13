@@ -150,11 +150,13 @@ a:link, a:visited{
     width: 60%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.social_media a{
-    margin: auto;
+.media_container > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .social_media img{
     height: auto;
@@ -282,7 +284,7 @@ a:link, a:visited{
     height: 30vh;
 }
 #Awards > .left{
-    float: left;
+    float: right;
     width: 70%;
     height: 100%;
     display: flex;
@@ -291,7 +293,7 @@ a:link, a:visited{
     flex-direction: column;
 }
 #Awards > .right{
-    float: left;
+    float: right;
     width: 30%;
     height: 100%;
     display: flex;
@@ -392,9 +394,9 @@ RWD
     }
     #typing_area{
         height: 80%;
+        justify-content: center;
     }
     #switch_area{
-        height: 55%;
         display: none;
     }
 
