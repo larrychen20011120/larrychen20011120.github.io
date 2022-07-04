@@ -165,7 +165,6 @@ a:link, a:visited{
 
 #Experience{
     width: 100%;
-    height: 100vh;
     background-color: #4298b5;
     display: flex;
     justify-content: center;
@@ -175,12 +174,11 @@ a:link, a:visited{
 .timeline{
     position: absolute;
     top: 2vw;
-    /*** 
-        left = 50 - 1/2 * width 
+    /***
+        left = 50 - 1/2 * width
     ***/
     left: 49.7vw;
     width: 0.6vw;
-    height: 90vh;
     background-color: #a5dff9;
     border-radius: 3px;
 }
@@ -188,8 +186,8 @@ a:link, a:visited{
     position: absolute;
     width: 2vw;
     height: 2vw;
-    /*** 
-        left = 50 - 1/2 * width 
+    /***
+        left = 50 - 1/2 * width
     ***/
     left: 49vw;
     border-radius: 50%;
@@ -197,8 +195,6 @@ a:link, a:visited{
 }
 .experience_box{
     position: absolute;
-    width: 26vw;
-    height: 8vw;
     background-color: #a5dff9;
     border-radius: 8px;
     border-style: solid;
@@ -276,7 +272,6 @@ a:link, a:visited{
 
 #Awards{
     width: 100%;
-    height: 100vh;
     background-color: #f7f5f1;
 }
 #Awards img{
@@ -304,7 +299,7 @@ a:link, a:visited{
 
 .honor_box{
     width: 70%;
-    height: 13%;
+    height: 13vh;
     background-color: #ecb83c;
     border-radius: 5px;
     margin: 5vh;
@@ -382,91 +377,4 @@ footer .right{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-/***
-RWD 
-***/
-@media screen and (max-width: 1000px) {
-    
-    #menu{
-        height: 40vh;
-    }
-    #typing_area{
-        height: 80%;
-        justify-content: center;
-    }
-    #switch_area{
-        display: none;
-    }
-
-    #typing{
-        font-size: xx-large;
-    }
-
-    .switch_box{
-        width: 30vw;
-        height: 30vw;
-    }
-    #Profile{
-        height: 200vh;
-    }
-    #Profile > .right{
-        height: 40%;
-        width: 100%;
-        flex-direction: column;
-    }
-    #Profile > .left{
-        height: 60%;
-        width: 100%;
-    }
-    .social_media{
-        margin-bottom: 1vh;
-    }
-    .self_img, .social_media{
-        justify-content: center;
-    }
-
-    .timeline, .timepoint{
-        display: none;
-    }
-    .experience_box{
-        width: 60vw;
-        margin: 5% 0px ;
-    }
-
-    #Awards{
-        height: 200vh;
-    }
-    #Awards > .left{
-        height: 50%;
-        width: 100%;
-    }
-    #Awards > .right{
-        height: 50%;
-        width: 100%;
-    }
-    .honor_box{
-        width: 90%;
-    }
-    .honor_box > p{
-        font-size: medium;
-    }
-    .title{
-        font-size: xx-large;
-    }
-
-    footer > .left{
-        width: 100%;
-        height: 50%;
-    }
-    footer > .right{
-        width: 100%;
-        height: 50%;
-    }
-
-    footer{
-        height: 60vh;
-    }
-    
 }
