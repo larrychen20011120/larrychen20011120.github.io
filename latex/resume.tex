@@ -1,0 +1,278 @@
+% %-------------------------
+% % Resume in Latex
+% % Author : Jake Gutierrez
+% % Based off of: https://github.com/sb2nov/resume
+% % License : MIT
+% %------------------------
+
+% One-page resume for Kuan-Ting (Larry) Chen
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\ifdefined\ResumeTimes
+  \usepackage{tgtermes}
+\else
+  \usepackage[sfdefault]{roboto}
+\fi
+\usepackage{fontawesome5}
+\usepackage{accsupp}
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = *}
+\usepackage{ragged2e}
+\usepackage[a4paper,left=0.45in,right=0.45in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\input{glyphtounicode}
+
+\ifdefined\ResumeTimes
+  \renewcommand{\familydefault}{\rmdefault}
+\else
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+\linespread{1.02}
+\pagestyle{empty}
+\raggedright
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\pdfgentounicode=1
+
+% Soft, high-contrast palette that remains readable in print.
+\definecolor{titletext}{HTML}{202124}
+\definecolor{skill}{HTML}{374151}
+\definecolor{bodytext}{HTML}{667085}
+\definecolor{secondary}{HTML}{667085}
+\definecolor{metared}{HTML}{D32F2F}
+\definecolor{linkblue}{HTML}{1976D2}
+\definecolor{rulegray}{HTML}{D1D5DB}
+\color{bodytext}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue,
+  pdfborder={0 0 0},
+  pdftitle={Kuan-Ting Chen Resume},
+  pdfauthor={Kuan-Ting Chen}
+}
+\urlstyle{same}
+
+\titleformat{\section}
+  {\color{black}\bfseries\Large}
+  {}{0pt}{}
+  [\vspace{-0.5pt}{\color{black}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{5pt}{4pt}
+
+\newcommand{\resumeMeta}[1]{\textcolor{metared}{\footnotesize #1}}
+\newcommand{\resumeLink}[2]{\href{#1}{\textcolor{linkblue}{#2}}}
+\newcommand{\resumeHeaderLink}[2]{\href{#1}{\textcolor{secondary}{#2}}}
+\newcommand{\resumeIcon}[1]{%
+  \BeginAccSupp{ActualText={}}\faIcon{#1}\EndAccSupp{}%
+}
+
+\newcommand{\resumeEducation}[4]{%
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\color{titletext}#1} & \resumeMeta{#2} \\
+    {\small\textit{\color{secondary}#3}} & \resumeMeta{#4}
+  \end{tabular*}
+  % \vspace{-1pt}
+}
+
+\newcommand{\resumeExperience}[4]{%
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\color{titletext}#1}\hspace{0.45em}\resumeLink{#3}{#2} & \resumeMeta{#4}
+  \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeIconLink}[3]{%
+  \href{#1}{%
+    \color{linkblue}#2\hspace{0.3em}#3%
+  }%
+}
+
+\newcommand{\resumeCode}[1]{%
+  \resumeIconLink{#1}{\faGithub}{Code}%
+}
+
+\newcommand{\resumePaper}[1]{%
+  \resumeIconLink{#1}{\faFile}{Report}%
+}
+\newcommand{\resumeWebsite}[1]{%
+  \resumeIconLink{#1}{\faGlobe}{Website}%
+}
+
+\newcommand{\resumeProject}[2]{%
+  \item
+  \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\color{titletext}#1}
+    &
+    {\small #2}
+  \end{tabular*}\vspace{-2pt}
+}
+\newcommand{\resumeSkills}[1]{%
+  \vspace{-2pt}
+  {\small
+    \hspace{0.6em}%
+    \textbf{\color{skill}Skills:}
+    \hspace{0.2em}
+    \color{skill}#1
+  }\par
+  \vspace{-2pt}
+}
+
+\newcommand{\resumeAward}[2]{%
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\color{titletext}#1} & \resumeMeta{#2}
+  \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeHeadingListStart}{%
+  \begin{itemize}[leftmargin=0pt,label={},itemsep=5pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=1.5em,label=\textcolor{metared}{\raisebox{0.2ex}{\scriptsize$\bullet$}},itemsep=0.7pt,topsep=3.5pt,parsep=0pt,partopsep=0pt]
+  \small
+}
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries\color{black}Kuan-Ting (Larry) Chen}\\[4pt]
+  \footnotesize
+  \resumeHeaderLink{tel:+886905108670}{\resumeIcon{phone}\hspace{0.3em}+886 905-108-670}
+  \enspace\textcolor{rulegray}{|}\enspace
+  \resumeHeaderLink{mailto:larrybrown901120@gmail.com}{\resumeIcon{envelope}\hspace{0.3em}larrybrown901120@gmail.com}
+  \enspace\textcolor{rulegray}{|}\enspace
+  \resumeHeaderLink{https://www.linkedin.com/in/kutchen}{\resumeIcon{linkedin}\hspace{0.3em}kutchen}
+  \enspace\textcolor{rulegray}{|}\enspace
+  \resumeHeaderLink{https://github.com/larrychen20011120}{\resumeIcon{github}\hspace{0.3em}larrychen20011120}
+  \enspace\textcolor{rulegray}{|}\enspace
+  \resumeHeaderLink{https://larrychen20011120.github.io/}{\resumeIcon{home}\hspace{0.3em}HomePage}
+\end{center}
+\vspace{-8pt}
+
+\section{Education}
+\resumeHeadingListStart
+  \resumeEducation
+    {National Yang Ming Chiao Tung University,\hspace{0.45em}{\mdseries\resumeLink{https://nycu-adsl.cc/}{Advanced Database System Laboratory}}}
+    {Hsinchu, Taiwan}
+    {M.S. in Computer Science and Engineering (Advisor: Prof. Wen-Chih Peng)}
+    {2024/09 \textendash{} Present}
+  \resumeItemListStart
+    \resumeItem{Research: Sports Analytics, Large Language Models, and Reinforcement Learning}
+    \resumeItem{GPA: 4.3/4.3; Member, The \textbf{Phi Tau Phi} Scholastic Honor Society; 2 Academic Excellence Awards; 2 publications}
+  \resumeItemListEnd
+  \vspace{-3pt}
+
+  \resumeEducation
+    {National Cheng Kung University,\hspace{0.45em}{\mdseries\resumeLink{https://ikmlab.cs.nthu.edu.tw/}{Intelligent Knowledge Management Laboratory}}}
+    {Tainan, Taiwan}
+    {B.S. in Computer Science and Information Engineering (Advisor: Prof. Hung-Yu Kao)}
+    {2020/09 \textendash{} 2024/06}
+  \resumeItemListStart
+    \resumeItem{Research: Natural Language Processing, Hateful Meme Detection, and Fact Checking}
+    \resumeItem{GPA: 4.21/4.3; 1 Academic Excellence Award; 3 extracurricular awards}
+  \resumeItemListEnd
+\resumeHeadingListEnd
+
+\section{Experience}
+\resumeHeadingListStart
+  \resumeExperience
+    {Student Project Lead,}
+    {Precision Sports Science Research Project}
+    {https://sites.google.com/nycu.edu.tw/coachai-version1/home}
+    {2025/05 \textendash{} 2026/09}
+  \resumeItemListStart
+    \resumeItem{Coordinated five subprojects as the student lead, managing cross-team integration, reports, meetings, and project demonstrations}
+    \resumeItem{Developed CoachAI+ badminton environment and BadmintonTwin, and contributed to BadmintonReels and BadmintonGPT}
+  \resumeItemListEnd
+\resumeHeadingListEnd
+
+\section{Projects}
+\resumeHeadingListStart
+
+    \resumeProject
+    {BadmintonTwin: An LLM-based Virtual Badminton Player}
+    {}
+  \resumeItemListStart
+    \resumeItem{Developed a multi-agent LLM framework for controllable, player-specific badminton rally simulation}
+    \resumeItem{Built a hybrid RAG pipeline combining physical-state retrieval and semantic contextual memory from historical rallies}
+  \resumeItemListEnd
+  \resumeSkills{Large Language Models · Retrieval-Augmented Generation · AI Agents · Human Evaluation}
+  
+  \resumeProject
+    {CoachAI+ Badminton Environment}
+    {\resumeCode{https://github.com/KuangDW/CoachAI-Plus}}
+  \resumeItemListStart
+    \resumeItem{Developed PDQN, HybridPPO, and HybridSAC baselines for hybrid action-space RL in badminton strategy optimization}
+    \resumeItem{Designed simulation environments and evaluation metrics by integrating coach knowledge into quantifiable objectives}
+  \resumeItemListEnd
+  \resumeSkills{Reinforcement Learning · Hybrid Action Space · Simulator · PyTorch · Sport Analytics}
+
+  % \resumeProject
+  %   {Meichu Hackathon \textendash{} Real-Time Safety Monitoring System}
+  %   % {YOLOv7, Data Augmentation, Object Detection, Computer Vision, Raspberry Pi}
+  %   {\resumeCode{https://github.com/larrychen20011120/tsmc-hackathon}}
+  % \resumeItemListStart
+  %   \resumeItem{Trained and iteratively refined a YOLOv7 model using augmentation and multi-stage training}
+  %   \resumeItem{Deployed real-time inference on laptops and Raspberry Pi, integrated with backend REST APIs}
+  % \resumeItemListEnd
+\resumeHeadingListEnd
+
+\section{Publications}
+{\small\color{secondary}\justifying\setlength{\parindent}{0pt}
+  \textbf{\textcolor{titletext}{Kuan-Ting Chen}}, Kuang-Da Wang, and Wen-Chih Peng. ``BadmintonTwin: Tactical Memory-Augmented LLM Agents for Instruction-Conditioned Badminton Rally Simulation.'' \textbf{\textcolor{titletext}{Under review at ACL Rolling Review}}.\par\vspace{2.5pt}
+  Tsan-Tsung Yang, I-Wei Chen, \textbf{\textcolor{titletext}{Kuan-Ting Chen}}, Shang-Hsuan Chiang, and Wen-Chih Peng. ``Robust Detection and Source Identification of AI-Generated Images Using CNN and CLIP-Based Models.'' \textbf{\textcolor{titletext}{AAAI Defactify 2025}}. \hspace{0.2em}[\hspace{0.1em}\resumeLink{https://arxiv.org/pdf/2503.10718}{Paper}\hspace{0.1em}] [\hspace{0.1em}\resumeLink{https://github.com/uuugaga/Defactify_4}{Code}\hspace{0.1em}]\par
+}
+\vspace{-2pt}
+
+\section{Awards}
+\resumeHeadingListStart
+  \resumeAward
+  {College Student Research Creativity Award}
+  {2024/07}
+  \resumeItemListStart
+    \resumeItem{Awarded to only \textasciitilde5\% of participants. Converted multimodal inputs and HurtLex knowledge into text, then finetuned HateBERT with Masked Language Modeling (MLM) objective function.}
+  \resumeItemListEnd
+  \resumeSkills{Hateful Meme Detection · Visual Feature Extraction · Prompt Engineering · MLM · CLIP}
+
+  \resumeAward
+  {AI Cup 2023 Factual Text Retrieval and Verification Competition \textemdash{} Honorable Mention}
+  {2024/03}
+  \resumeItemListStart
+    \resumeItem{Achieved the 13th place out of 301 participants. Built a 3-stage fact verification pipeline using multi-source retrieval, BERT-based evidence selection, and BERT-based claim verification.}
+  \resumeItemListEnd
+  \resumeSkills{BERT · Fact Verification · Information Retrieval · TF-IDF · Chinese Text Preprocessing · Text Classification}
+
+  \resumeAward
+  {Meichu Hackathon Hacker Group (TSMC) \textemdash{} Second Place}
+  {2022/10}
+   \resumeItemListStart
+    \resumeItem{Trained and optimized YOLOv7 with augmentation and multi-stage training, then deployed real-time inference on laptops and Raspberry Pi with REST API integration.}
+  \resumeItemListEnd
+  
+  \resumeSkills{YOLOv7 · Data Augmentation · Object Detection · Computer Vision · Raspberry Pi}
+\resumeHeadingListEnd
+
+\section{Technical Skills}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1.5em}}>{\raggedright\arraybackslash}X@{}}
+  \textbf{Proficient:} Python, PyTorch, AI Agents, RAG, Reinforcement Learning, Computer Vision
+  \par\vspace{1pt}
+  \textbf{Familiar:} C++, JavaScript
+  &
+  \textbf{Tools:} Git, VS Code, OpenCode, vLLM
+  \par\vspace{1pt}
+  \textbf{Languages:} Mandarin (Native), English (Fluent; TOEIC: 800)
+\end{tabularx}
+
+\end{document}

@@ -4,6 +4,8 @@ const themeColor = document.querySelector('meta[name="theme-color"]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const navigation = document.querySelector('[data-nav]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const typingText = document.querySelector('[data-typing-text]');
+const entryLoader = document.querySelector('[data-entry-loader]');
 
 function updateTheme(theme) {
   const isDark = theme === 'dark';
@@ -13,6 +15,22 @@ function updateTheme(theme) {
 }
 
 updateTheme(root.dataset.theme || 'light');
+
+if (entryLoader) {
+  if (reduceMotion.matches) {
+    root.classList.remove('is-loading');
+    entryLoader.remove();
+  } else {
+    window.setTimeout(() => entryLoader.classList.add('is-opening'), 720);
+    window.setTimeout(() => {
+      root.classList.remove('is-loading');
+      entryLoader.classList.add('is-leaving');
+    }, 1420);
+    window.setTimeout(() => entryLoader.remove(), 1880);
+  }
+} else {
+  root.classList.remove('is-loading');
+}
 
 themeToggle.addEventListener('click', () => {
   const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
@@ -94,8 +112,71 @@ if ('IntersectionObserver' in window) {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
+const typingPhrases = ['sports intelligence', 'LLM agents', 'tactical simulation'];
+
+if (typingText) {
+  if (reduceMotion.matches) {
+    typingText.textContent = typingPhrases.join(' · ');
+  } else {
+    let phraseIndex = 0;
+    let characterIndex = 0;
+    let deleting = false;
+
+    function updateTypingText() {
+      const phrase = typingPhrases[phraseIndex];
+      characterIndex += deleting ? -1 : 1;
+      typingText.textContent = phrase.slice(0, characterIndex);
+
+      let delay = deleting ? 38 : 72;
+
+      if (!deleting && characterIndex === phrase.length) {
+        deleting = true;
+        delay = 1400;
+      } else if (deleting && characterIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        delay = 260;
+      }
+
+      window.setTimeout(updateTypingText, delay);
+    }
+
+    typingText.textContent = '';
+    window.setTimeout(updateTypingText, 350);
+  }
+}
+
+const finePointer = window.matchMedia('(pointer: fine)');
+
+if (finePointer.matches && !reduceMotion.matches) {
+  let lastSparkTime = 0;
+  let lastSparkX = -100;
+  let lastSparkY = -100;
+
+  document.addEventListener('pointermove', (event) => {
+    const now = performance.now();
+    const distance = Math.hypot(event.clientX - lastSparkX, event.clientY - lastSparkY);
+
+    if (now - lastSparkTime < 60 || distance < 10) return;
+
+    const spark = document.createElement('span');
+    spark.className = `cursor-spark${Math.random() < 0.24 ? ' is-confetti' : ''}`;
+    spark.style.left = `${event.clientX}px`;
+    spark.style.top = `${event.clientY}px`;
+    spark.style.setProperty('--spark-x', `${Math.round(Math.random() * 24 - 12)}px`);
+    spark.style.setProperty('--spark-y', `${Math.round(Math.random() * 16 + 12)}px`);
+    spark.style.setProperty('--spark-rotation', `${Math.round(Math.random() * 80 - 40)}deg`);
+    document.body.append(spark);
+    spark.addEventListener('animationend', () => spark.remove(), { once: true });
+
+    lastSparkTime = now;
+    lastSparkX = event.clientX;
+    lastSparkY = event.clientY;
+  }, { passive: true });
+}
+
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 760) closeMenu();
+  if (window.innerWidth > 840) closeMenu();
 });
