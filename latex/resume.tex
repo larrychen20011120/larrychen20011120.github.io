@@ -23,7 +23,6 @@
 \usepackage[a4paper,left=0.45in,right=0.45in,top=0.45in,bottom=0.45in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{tabularx}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \input{glyphtounicode}
@@ -41,8 +40,7 @@
 \pdfgentounicode=1
 
 % Soft, high-contrast palette that remains readable in print.
-\definecolor{titletext}{HTML}{202124}
-\definecolor{skill}{HTML}{374151}
+\definecolor{titletext}{HTML}{000000}
 \definecolor{bodytext}{HTML}{667085}
 \definecolor{secondary}{HTML}{667085}
 \definecolor{metared}{HTML}{D32F2F}
@@ -118,17 +116,17 @@
   \vspace{-2pt}
   {\small
     \hspace{0.6em}%
-    \textbf{\color{skill}Skills:}
+    \textbf{\color{titletext}Skills:}
     \hspace{0.2em}
-    \color{skill}#1
+    \color{bodytext}#1
   }\par
   \vspace{-2pt}
 }
 
-\newcommand{\resumeAward}[2]{%
+\newcommand{\resumeAward}[3]{%
   \item
   \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{\color{titletext}#1} & \resumeMeta{#2}
+    \textbf{\color{titletext}#1} & {\small\resumeCode{#3}}\hspace{0.8em}\resumeMeta{#2}
   \end{tabular*}\vspace{-2pt}
 }
 
@@ -158,10 +156,10 @@
   \enspace\textcolor{rulegray}{|}\enspace
   \resumeHeaderLink{https://larrychen20011120.github.io/}{\resumeIcon{home}\hspace{0.3em}HomePage}
 \end{center}
-\vspace{-8pt}
+\vspace{-5pt}
 
 \section{Education}
-\resumeHeadingListStart
+\begin{itemize}[leftmargin=0pt,label={},itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]
   \resumeEducation
     {National Yang Ming Chiao Tung University,\hspace{0.45em}{\mdseries\resumeLink{https://nycu-adsl.cc/}{Advanced Database System Laboratory}}}
     {Hsinchu, Taiwan}
@@ -169,9 +167,10 @@
     {2024/09 \textendash{} Present}
   \resumeItemListStart
     \resumeItem{Research: Sports Analytics, Large Language Models, and Reinforcement Learning}
-    \resumeItem{GPA: 4.3/4.3; Member, The \textbf{Phi Tau Phi} Scholastic Honor Society; 2 Academic Excellence Awards; 2 publications}
+    \resumeItem{\textbf{\textcolor{titletext}{Member, The Phi Tau Phi Scholastic Honor Society}}}
+    \resumeItem{GPA: 4.3/4.3; 2 Academic Excellence Awards; 2 publications; AAAI Student Volunteer}
   \resumeItemListEnd
-  \vspace{-3pt}
+  \vspace{-4pt}
 
   \resumeEducation
     {National Cheng Kung University,\hspace{0.45em}{\mdseries\resumeLink{https://ikmlab.cs.nthu.edu.tw/}{Intelligent Knowledge Management Laboratory}}}
@@ -182,7 +181,7 @@
     \resumeItem{Research: Natural Language Processing, Hateful Meme Detection, and Fact Checking}
     \resumeItem{GPA: 4.21/4.3; 1 Academic Excellence Award; 3 extracurricular awards}
   \resumeItemListEnd
-\resumeHeadingListEnd
+\end{itemize}\vspace{-2pt}
 
 \section{Experience}
 \resumeHeadingListStart
@@ -192,41 +191,42 @@
     {https://sites.google.com/nycu.edu.tw/coachai-version1/home}
     {2025/05 \textendash{} 2026/09}
   \resumeItemListStart
-    \resumeItem{Coordinated five subprojects as the student lead, managing cross-team integration, reports, meetings, and project demonstrations}
-    \resumeItem{Developed CoachAI+ badminton environment and BadmintonTwin, and contributed to BadmintonReels and BadmintonGPT}
+    \resumeItem{Coordinated 5 subprojects as the student lead, managing cross-team integration, meetings, and demonstrations.}
+    \resumeItem{Developed \textbf{\textcolor{titletext}{CoachAI+}} badminton environment and \textbf{\textcolor{titletext}{BadmintonTwin}}, and contributed to \textbf{\textcolor{titletext}{BadmintonReels}}.}
+    \resumeItem{Currently helping develop \textbf{\textcolor{titletext}{BadmintonGPT}} by turning subproject functions into MCP tools for a unified AI assistant.}
   \resumeItemListEnd
 \resumeHeadingListEnd
 
 \section{Projects}
-\resumeHeadingListStart
+\begin{itemize}[leftmargin=0pt,label={},itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]
 
     \resumeProject
     {BadmintonTwin: An LLM-based Virtual Badminton Player}
-    {}
+    {\resumeCode{https://anonymous.4open.science/r/BadmintonTwin/}}
   \resumeItemListStart
-    \resumeItem{Developed a multi-agent LLM framework for controllable, player-specific badminton rally simulation}
-    \resumeItem{Built a hybrid RAG pipeline combining physical-state retrieval and semantic contextual memory from historical rallies}
+    \resumeItem{Developed a multi-agent LLM framework for controllable, player-specific badminton rally simulation.}
+    \resumeItem{Built a hybrid RAG pipeline combining physical-state retrieval and semantic contextual memory from historical rallies.}
   \resumeItemListEnd
-  \resumeSkills{Large Language Models · Retrieval-Augmented Generation · AI Agents · Human Evaluation}
+  \resumeSkills{Large Language Models · Retrieval-Augmented Generation · AI Agents · Imitation Learning}
   
   \resumeProject
     {CoachAI+ Badminton Environment}
     {\resumeCode{https://github.com/KuangDW/CoachAI-Plus}}
   \resumeItemListStart
-    \resumeItem{Developed PDQN, HybridPPO, and HybridSAC baselines for hybrid action-space RL in badminton strategy optimization}
-    \resumeItem{Designed simulation environments and evaluation metrics by integrating coach knowledge into quantifiable objectives}
+    \resumeItem{Developed PDQN, HybridPPO, and HybridSAC baselines for hybrid action-space RL in badminton strategy optimization.}
+    \resumeItem{Designed simulation environments and evaluation metrics by integrating coach knowledge into quantifiable objectives.}
   \resumeItemListEnd
-  \resumeSkills{Reinforcement Learning · Hybrid Action Space · Simulator · PyTorch · Sport Analytics}
+  \resumeSkills{Reinforcement Learning · Hybrid Action Space · Simulator · PyTorch · Data Analysis}
 
-  % \resumeProject
-  %   {Meichu Hackathon \textendash{} Real-Time Safety Monitoring System}
-  %   % {YOLOv7, Data Augmentation, Object Detection, Computer Vision, Raspberry Pi}
-  %   {\resumeCode{https://github.com/larrychen20011120/tsmc-hackathon}}
-  % \resumeItemListStart
-  %   \resumeItem{Trained and iteratively refined a YOLOv7 model using augmentation and multi-stage training}
-  %   \resumeItem{Deployed real-time inference on laptops and Raspberry Pi, integrated with backend REST APIs}
-  % \resumeItemListEnd
-\resumeHeadingListEnd
+  \resumeProject
+    {Medical Conversation Analysis System}
+    {\resumeCode{https://github.com/larrychen20011120/inquiry_analysis/}}
+  \resumeItemListStart
+    \resumeItem{Built a pipeline integrating speaker diarization and Azure ASR to generate doctor-patient consultation transcripts.}
+    \resumeItem{Developed separate web and analysis servers, using medical NER to extract key medical terms and provide physicians with consultation transcripts and analysis results.}
+  \resumeItemListEnd
+  \resumeSkills{Python · Flask · SQL · Speaker Diarization · Azure Speech Services · Named Entity Recognition}
+\end{itemize}\vspace{-2pt}
 
 \section{Publications}
 {\small\color{secondary}\justifying\setlength{\parindent}{0pt}
@@ -236,43 +236,41 @@
 \vspace{-2pt}
 
 \section{Awards}
-\resumeHeadingListStart
+\begin{itemize}[leftmargin=0pt,label={},itemsep=-2pt,topsep=0pt,parsep=0pt,partopsep=0pt]
   \resumeAward
   {College Student Research Creativity Award}
   {2024/07}
+  {https://github.com/larrychen20011120/hateful-meme-project}
   \resumeItemListStart
     \resumeItem{Awarded to only \textasciitilde5\% of participants. Converted multimodal inputs and HurtLex knowledge into text, then finetuned HateBERT with Masked Language Modeling (MLM) objective function.}
   \resumeItemListEnd
-  \resumeSkills{Hateful Meme Detection · Visual Feature Extraction · Prompt Engineering · MLM · CLIP}
-
+  % \resumeSkills{Hateful Meme Detection · Visual Feature Extraction · Prompt Engineering · MLM · CLIP}
   \resumeAward
   {AI Cup 2023 Factual Text Retrieval and Verification Competition \textemdash{} Honorable Mention}
   {2024/03}
+  {https://github.com/larrychen20011120/aicup_fact_verification}
   \resumeItemListStart
     \resumeItem{Achieved the 13th place out of 301 participants. Built a 3-stage fact verification pipeline using multi-source retrieval, BERT-based evidence selection, and BERT-based claim verification.}
   \resumeItemListEnd
-  \resumeSkills{BERT · Fact Verification · Information Retrieval · TF-IDF · Chinese Text Preprocessing · Text Classification}
+  % \resumeSkills{BERT · Fact Verification · Information Retrieval · TF-IDF · Chinese Text Preprocessing · Text Classification}
 
   \resumeAward
   {Meichu Hackathon Hacker Group (TSMC) \textemdash{} Second Place}
   {2022/10}
+  {https://github.com/larrychen20011120/tsmc-hackathon}
    \resumeItemListStart
-    \resumeItem{Trained and optimized YOLOv7 with augmentation and multi-stage training, then deployed real-time inference on laptops and Raspberry Pi with REST API integration.}
+    \resumeItem{Applied transfer learning to YOLOv7 with strong data augmentation and multi-stage training, then deployed real-time inference on laptops and Raspberry Pi with REST API integration.}
   \resumeItemListEnd
   
-  \resumeSkills{YOLOv7 · Data Augmentation · Object Detection · Computer Vision · Raspberry Pi}
-\resumeHeadingListEnd
+  % \resumeSkills{YOLOv7 · Data Augmentation · Object Detection · Transfer Learning · Raspberry Pi}
+\end{itemize}\vspace{-3pt}
 
 \section{Technical Skills}
 \small
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1.5em}}>{\raggedright\arraybackslash}X@{}}
-  \textbf{Proficient:} Python, PyTorch, AI Agents, RAG, Reinforcement Learning, Computer Vision
-  \par\vspace{1pt}
-  \textbf{Familiar:} C++, JavaScript
-  &
-  \textbf{Tools:} Git, VS Code, OpenCode, vLLM
-  \par\vspace{1pt}
-  \textbf{Languages:} Mandarin (Native), English (Fluent; TOEIC: 800)
-\end{tabularx}
+\textbf{\textcolor{titletext}{Proficient:}} Python, PyTorch, Agentic AI, NLP, Reinforcement Learning, Machine Learning, vLLM
+\par\vspace{0.5pt}
+\textbf{\textcolor{titletext}{Familiar:}} C++, Computer Vision, Parallel Programming, Graph Neural Networks, CI/CD
+\par\vspace{0.5pt}
+\textbf{\textcolor{titletext}{Languages:}} Mandarin (Native), English (Fluent; TOEIC: 800)
 
 \end{document}

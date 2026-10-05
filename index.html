@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Academic portfolio of Kuan-Ting Chen, an AI researcher working on sports analytics, language models, and reinforcement learning."
+      content="Academic portfolio of Kuan-Ting Chen, an AI researcher working on agentic AI, language models, reinforcement learning, and AI applications in finance."
     >
     <meta name="theme-color" content="#f6c915">
     <title>Kuan-Ting Chen | AI Researcher</title>
@@ -84,21 +84,32 @@
     <div class="page-layout">
       <aside class="profile" aria-labelledby="profile-name">
         <div class="profile-intro">
-          <div class="pika-portrait" role="img" aria-label="A friendly Pikachu-inspired yellow character portrait">
+          <button
+            class="pika-portrait"
+            type="button"
+            data-profile-toggle
+            aria-label="A friendly Pikachu-inspired yellow character portrait"
+            aria-pressed="false"
+            disabled
+          >
             <span class="pika-ear pika-ear-left" aria-hidden="true"></span>
             <span class="pika-ear pika-ear-right" aria-hidden="true"></span>
-            <span class="pika-eye pika-eye-left" aria-hidden="true"></span>
-            <span class="pika-eye pika-eye-right" aria-hidden="true"></span>
-            <span class="pika-nose" aria-hidden="true"></span>
-            <span class="pika-mouth" aria-hidden="true"></span>
-            <span class="pika-cheek pika-cheek-left" aria-hidden="true"></span>
-            <span class="pika-cheek pika-cheek-right" aria-hidden="true"></span>
-            <span class="pika-spark" aria-hidden="true"></span>
+            <span class="pika-face" aria-hidden="true">
+              <span class="pika-eye pika-eye-left"></span>
+              <span class="pika-eye pika-eye-right"></span>
+              <span class="pika-nose"></span>
+              <span class="pika-mouth"></span>
+              <span class="pika-cheek pika-cheek-left"></span>
+              <span class="pika-cheek pika-cheek-right"></span>
+              <span class="pika-spark"></span>
+            </span>
+            <img class="profile-photo" src="static/profile.jpg" alt="" data-profile-photo>
             <span class="pika-message" aria-hidden="true">Hi!</span>
-          </div>
+          </button>
 
           <div class="profile-heading">
             <h2 id="profile-name">Kuan-Ting Chen</h2>
+            <p class="profile-role">AI Engineer · Software Engineer</p>
           </div>
         </div>
 
@@ -145,34 +156,54 @@
         <section class="intro section" id="about" aria-labelledby="about-title">
           <h2 id="about-title" class="sr-only">About</h2>
           <p class="typing-kicker" aria-hidden="true">
-            <span class="typing-label">Currently building</span>
-            <span class="typing-text" data-typing-text>sports intelligence</span>
+            <span class="typing-label">Focus areas</span>
+            <span class="typing-text" data-typing-text>agentic AI</span>
             <span class="typing-caret"></span>
           </p>
-          <p class="sr-only">Current research focuses include sports intelligence, LLM agents, and tactical simulation.</p>
+          <p class="sr-only">Focus areas include agentic AI, Hermes Agent, data mining, large language models, reinforcement learning, AI applications in finance, and data science competitions.</p>
           <p class="intro-lead">
-            Hi! I am <strong>Kuan-Ting Chen</strong>, a master's student in Computer Science at
-            <a href="https://www.nycu.edu.tw/" target="_blank" rel="noreferrer">National Yang Ming Chiao Tung University</a>,
-            advised by Prof. Wen-Chih Peng.
+            Hello <span aria-hidden="true">👋</span>! I'm <strong>Kuan-Ting Chen</strong>, but you can call me
+            <strong>Larry</strong>. I'm currently a master's student in Computer Science and Engineering at
+            <strong>National Yang Ming Chiao Tung University (NYCU)</strong>, and I previously earned my bachelor's
+            degree in Computer Science and Information Engineering from
+            <strong>National Cheng Kung University (NCKU)</strong>.
           </p>
           <p>
-            My research sits at the intersection of <strong>sports analytics</strong>,
-            <strong>large language models</strong>, and <strong>reinforcement learning</strong>.
-            I build intelligent systems that can understand tactical context, simulate human decisions,
-            and support better coaching and analysis.
+            My research interests span <strong>agentic AI</strong>, <strong>data mining</strong>,
+            <strong>large language models</strong>, and <strong>reinforcement learning</strong>. I am a dedicated
+            student with a strong academic record and an enthusiasm for emerging technologies. I am currently
+            exploring the <strong>Hermes Agent</strong> framework and
+            <strong>AI applications in finance</strong>.
           </p>
           <p>
-            Previously, I studied Computer Science at National Cheng Kung University, where I worked on
-            natural language processing, hateful meme detection, and fact checking. I enjoy turning
-            research ideas into systems that work beyond the lab.
+            Looking ahead, I hope to publish at top-tier conferences, contribute to open-source projects, and
+            build practical AI-powered tools. I also enjoy data science and AI competitions, which help me sharpen
+            my intuition for data and strengthen my problem-solving skills.
           </p>
 
           <div class="interest-row">
-            <span>Sports AI</span>
-            <span>LLM Agents</span>
-            <span>RAG</span>
+            <span>Agentic AI</span>
+            <span>Data Mining</span>
+            <span>Large Language Models</span>
             <span>Reinforcement Learning</span>
-            <span>Computer Vision</span>
+            <span>Sports AI</span>
+            <span>Financial AI</span>
+            <span>Hermes Agent</span>
+          </div>
+
+          <div class="about-more">
+            <div class="about-more-block">
+              <h3>Beyond research</h3>
+              <p>Movies, coding, table tennis, swimming, and mathematics keep me curious and energized.</p>
+            </div>
+            <div class="about-more-block">
+              <h3>Current goals</h3>
+              <ul>
+                <li>Publish research at a top-tier AI conference.</li>
+                <li>Contribute practical AI tools to open source.</li>
+                <li>Compete in data science and AI challenges.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -191,18 +222,24 @@
                 <div class="entry-topline">
                   <div>
                     <span class="entry-label label-work">Experience</span>
-                    <h3>Student Project Lead &amp; Coordinator</h3>
+                    <h3>Student Project Lead</h3>
                   </div>
-                  <time>Sep. 2024 – Present</time>
+                  <div class="entry-meta">
+                    <time>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v3h6V2h2v3h2a2 2 0 0 1 2 2v1H3V7a2 2 0 0 1 2-2h2V2ZM5 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"></path></svg>
+                      May 2025 – Sep. 2026
+                    </time>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.1 6.4 10.9 7.4 11.7a1 1 0 0 0 1.2 0C13.6 20.9 20 15.1 20 10a8 8 0 0 0-8-8Z"></path><circle cx="12" cy="10" r="2.7"></circle></svg>
+                      Hsinchu, Taiwan
+                    </span>
+                  </div>
                 </div>
-                <p class="entry-place">
-                  <a href="https://sites.google.com/nycu.edu.tw/coachai-version1/home" target="_blank" rel="noreferrer">Precision Sports Science Research Project</a>
-                  <span>Hsinchu, Taiwan</span>
-                </p>
+                <p class="entry-place"><a href="https://sites.google.com/nycu.edu.tw/coachai-version1/home" target="_blank" rel="noreferrer">Precision Sports Science Research Project</a></p>
                 <ul>
-                  <li>Coordinate communication, integration, reports, and demonstrations across five subprojects.</li>
-                  <li>Develop badminton simulation systems including CoachAI+ and BadmintonTwin.</li>
-                  <li>Mentor undergraduate teams in system integration and technical writing.</li>
+                  <li>Coordinated five subprojects as the student lead, managing cross-team integration, meetings, and demonstrations.</li>
+                  <li>Developed <strong>CoachAI+</strong> badminton environment and <strong>BadmintonTwin</strong>, and contributed to <strong>BadmintonReels</strong>.</li>
+                  <li>Currently helping develop <strong>BadmintonGPT</strong> by turning subproject functions into MCP tools for a unified AI assistant.</li>
                 </ul>
               </div>
             </article>
@@ -226,12 +263,22 @@
                     <span class="entry-label">Education</span>
                     <h3>National Yang Ming Chiao Tung University</h3>
                   </div>
-                  <time>Sep. 2024 – Present</time>
+                  <div class="entry-meta">
+                    <time>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v3h6V2h2v3h2a2 2 0 0 1 2 2v1H3V7a2 2 0 0 1 2-2h2V2ZM5 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"></path></svg>
+                      Sep. 2024 – Present
+                    </time>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.1 6.4 10.9 7.4 11.7a1 1 0 0 0 1.2 0C13.6 20.9 20 15.1 20 10a8 8 0 0 0-8-8Z"></path><circle cx="12" cy="10" r="2.7"></circle></svg>
+                      Hsinchu, Taiwan
+                    </span>
+                  </div>
                 </div>
-                <p class="entry-place">M.S. in Computer Science and Engineering <span>Hsinchu, Taiwan</span></p>
-                <p>Advisor: Prof. Wen-Chih Peng · GPA: 4.3 / 4.3</p>
+                <p class="entry-place">M.S. in Computer Science and Engineering · <a href="https://nycu-adsl.cc/" target="_blank" rel="noreferrer">Advanced Database System Laboratory</a></p>
+                <p>Research: Sports Analytics, Large Language Models, and Reinforcement Learning</p>
+                <p>GPA: 4.3 / 4.3</p>
                 <div class="entry-tags">
-                  <span>Phi Tau Phi</span><span>2 Academic Excellence Awards</span><span>2 Publications</span>
+                  <span>Phi Tau Phi</span><span>2 Academic Excellence Awards</span><span>2 Publications</span><span>AAAI Student Volunteer</span>
                 </div>
               </div>
             </article>
@@ -246,10 +293,23 @@
                     <span class="entry-label">Education</span>
                     <h3>National Cheng Kung University</h3>
                   </div>
-                  <time>Sep. 2020 – Jun. 2024</time>
+                  <div class="entry-meta">
+                    <time>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v3h6V2h2v3h2a2 2 0 0 1 2 2v1H3V7a2 2 0 0 1 2-2h2V2ZM5 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"></path></svg>
+                      Sep. 2020 – Jun. 2024
+                    </time>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.1 6.4 10.9 7.4 11.7a1 1 0 0 0 1.2 0C13.6 20.9 20 15.1 20 10a8 8 0 0 0-8-8Z"></path><circle cx="12" cy="10" r="2.7"></circle></svg>
+                      Tainan, Taiwan
+                    </span>
+                  </div>
                 </div>
-                <p class="entry-place">B.S. in Computer Science and Information Engineering <span>Tainan, Taiwan</span></p>
-                <p>Research in NLP, hateful meme detection, and fact checking · GPA: 4.21 / 4.3</p>
+                <p class="entry-place">B.S. in Computer Science and Information Engineering · <a href="https://ikmlab.cs.nthu.edu.tw/" target="_blank" rel="noreferrer">Intelligent Knowledge Management Laboratory</a></p>
+                <p>Research: Natural Language Processing, Hateful Meme Detection, and Fact Checking</p>
+                <p>GPA: 4.21 / 4.3</p>
+                <div class="entry-tags">
+                  <span>Academic Excellence Award</span><span>3 Extracurricular Awards</span>
+                </div>
               </div>
             </article>
           </div>
@@ -296,10 +356,10 @@
               <div class="project-body">
                 <div class="project-meta"><span>01 · LLM Agents</span><span>Research</span></div>
                 <h3>BadmintonTwin</h3>
-                <p>A player-specific rally simulator combining language agents with physical and tactical memory.</p>
+                <p>A controllable, player-specific multi-agent rally simulator with hybrid RAG over physical states and tactical memory.</p>
                 <div class="project-links">
                   <a href="#publication-badmintontwin">Publication <span aria-hidden="true">↓</span></a>
-                  <a href="https://sites.google.com/nycu.edu.tw/coachai-version1/home" target="_blank" rel="noreferrer">Project site <span aria-hidden="true">↗</span></a>
+                  <a href="https://anonymous.4open.science/r/BadmintonTwin/" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </article>
@@ -333,8 +393,8 @@
               </figure>
               <div class="project-body">
                 <div class="project-meta"><span>02 · Reinforcement Learning</span><span>Open source</span></div>
-                <h3>CoachAI+ Environment</h3>
-                <p>Hybrid action-space environments and strong baselines for badminton strategy optimization.</p>
+                <h3>CoachAI+ Badminton Environment</h3>
+                <p>A hybrid action-space environment with PDQN, HybridPPO, and HybridSAC baselines and coach-informed evaluation metrics.</p>
                 <div class="project-links">
                   <a href="https://github.com/KuangDW/CoachAI-Plus" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>
                   <a href="https://sites.google.com/nycu.edu.tw/coachai-version1/home" target="_blank" rel="noreferrer">Project site <span aria-hidden="true">↗</span></a>
@@ -342,42 +402,43 @@
               </div>
             </article>
 
-            <article class="project-card project-card-vision reveal">
-              <figure class="project-figure figure-vision">
-                <svg viewBox="0 0 320 180" role="img" aria-labelledby="vision-diagram-title">
-                  <title id="vision-diagram-title">Real-time safety monitoring deployment pipeline diagram</title>
+            <article class="project-card reveal" id="project-medical-conversation">
+              <figure class="project-figure figure-medical">
+                <svg viewBox="0 0 320 180" role="img" aria-labelledby="medical-diagram-title">
+                  <title id="medical-diagram-title">Medical conversation analysis pipeline diagram</title>
                   <defs>
-                    <marker id="arrow-vision" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                    <marker id="arrow-medical" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="diagram-arrow"></path>
                     </marker>
                   </defs>
-                  <rect class="diagram-box" x="13" y="59" width="62" height="62" rx="8"></rect>
-                  <rect class="camera-lens" x="26" y="77" width="36" height="25" rx="3"></rect>
-                  <circle class="camera-eye" cx="44" cy="89.5" r="7"></circle>
-                  <text class="diagram-small" x="44" y="112" text-anchor="middle">camera</text>
-                  <rect class="diagram-box diagram-highlight" x="111" y="50" width="94" height="80" rx="8"></rect>
-                  <text x="158" y="76" text-anchor="middle">YOLOv7</text>
-                  <rect class="detection-box" x="132" y="86" width="24" height="27"></rect>
-                  <rect class="detection-box" x="163" y="82" width="21" height="31"></rect>
-                  <text class="diagram-small" x="158" y="121" text-anchor="middle">real-time inference</text>
-                  <rect class="diagram-box" x="241" y="20" width="66" height="50" rx="7"></rect>
-                  <text x="274" y="40" text-anchor="middle">Alert API</text>
-                  <text class="diagram-small" x="274" y="55" text-anchor="middle">REST</text>
-                  <rect class="diagram-box" x="241" y="110" width="66" height="50" rx="7"></rect>
-                  <text x="274" y="130" text-anchor="middle">Edge</text>
-                  <text class="diagram-small" x="274" y="145" text-anchor="middle">Raspberry Pi</text>
-                  <path class="diagram-flow" d="M75 90 H111" marker-end="url(#arrow-vision)"></path>
-                  <path class="diagram-flow" d="M205 75 Q223 45 241 45" marker-end="url(#arrow-vision)"></path>
-                  <path class="diagram-flow" d="M205 106 Q223 135 241 135" marker-end="url(#arrow-vision)"></path>
+                  <rect class="diagram-box" x="12" y="61" width="62" height="58" rx="8"></rect>
+                  <text x="43" y="84" text-anchor="middle">Audio</text>
+                  <text class="diagram-small" x="43" y="101" text-anchor="middle">doctor + patient</text>
+                  <rect class="diagram-box diagram-highlight" x="104" y="20" width="92" height="48" rx="8"></rect>
+                  <text x="150" y="39" text-anchor="middle">Diarization</text>
+                  <text class="diagram-small" x="150" y="54" text-anchor="middle">speaker turns</text>
+                  <rect class="diagram-box" x="104" y="112" width="92" height="48" rx="8"></rect>
+                  <text x="150" y="131" text-anchor="middle">Azure ASR</text>
+                  <text class="diagram-small" x="150" y="146" text-anchor="middle">transcription</text>
+                  <rect class="diagram-box" x="230" y="20" width="78" height="48" rx="8"></rect>
+                  <text x="269" y="39" text-anchor="middle">Medical NER</text>
+                  <text class="diagram-small" x="269" y="54" text-anchor="middle">key terms</text>
+                  <rect class="diagram-box" x="230" y="112" width="78" height="48" rx="8"></rect>
+                  <text x="269" y="131" text-anchor="middle">Web Results</text>
+                  <text class="diagram-small" x="269" y="146" text-anchor="middle">physician view</text>
+                  <path class="diagram-flow" d="M74 82 Q89 44 104 44" marker-end="url(#arrow-medical)"></path>
+                  <path class="diagram-flow" d="M74 99 Q89 136 104 136" marker-end="url(#arrow-medical)"></path>
+                  <path class="diagram-flow" d="M196 44 H230" marker-end="url(#arrow-medical)"></path>
+                  <path class="diagram-flow" d="M196 136 H230" marker-end="url(#arrow-medical)"></path>
+                  <path class="diagram-flow diagram-return" d="M269 68 V112" marker-end="url(#arrow-medical)"></path>
                 </svg>
               </figure>
               <div class="project-body">
-                <div class="project-meta"><span>03 · Computer Vision</span><span>2nd Place</span></div>
-                <h3>Real-Time Safety Monitor</h3>
-                <p>A YOLOv7 monitoring pipeline deployed on laptops and Raspberry Pi edge devices.</p>
+                <div class="project-meta"><span>03 · Medical NLP</span><span>Applied System</span></div>
+                <h3>Medical Conversation Analysis System</h3>
+                <p>A doctor-patient consultation pipeline combining speaker diarization, Azure ASR, medical NER, and separate web and analysis servers.</p>
                 <div class="project-links">
-                  <span class="project-award">Meichu Hackathon</span>
-                  <span class="link-pending" title="Public report link to be added">Report · Coming soon</span>
+                  <a href="https://github.com/larrychen20011120/inquiry_analysis/" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </article>
@@ -390,55 +451,26 @@
             <span class="title-bolt" aria-hidden="true"></span>
           </header>
 
-          <div class="publication-grid">
-            <article class="publication-card reveal" id="publication-badmintontwin">
-              <figure class="publication-media publication-media-twin">
-                <div class="publication-placeholder" role="img" aria-label="Reserved image area for the BadmintonTwin publication">
-                  <span>Paper visual</span>
-                  <strong>BadmintonTwin</strong>
-                  <small>16:9 artwork reserved</small>
-                </div>
-              </figure>
-              <div class="publication-body">
-                <div class="publication-meta">
-                  <span class="venue-pill">ARR</span>
-                  <span>Under review</span>
-                </div>
-                <h3>BadmintonTwin: Tactical Memory-Augmented LLM Agents for Instruction-Conditioned Badminton Rally Simulation</h3>
-                <p class="publication-authors"><u>Kuan-Ting Chen</u>, Kuang-Da Wang, and Wen-Chih Peng</p>
-                <p>
-                  A multi-agent framework that uses tactical memory and instruction conditioning to simulate
-                  controllable, player-specific badminton rallies.
-                </p>
-                <div class="card-actions">
-                  <span>Research preview</span>
-                </div>
+          <div class="publication-list">
+            <article class="publication-item reveal" id="publication-badmintontwin">
+              <div class="publication-meta">
+                <span class="venue-pill">ARR</span>
+                <span>Under review</span>
               </div>
+              <h3>BadmintonTwin: Tactical Memory-Augmented LLM Agents for Instruction-Conditioned Badminton Rally Simulation</h3>
+              <p class="publication-authors"><u>Kuan-Ting Chen</u>, Kuang-Da Wang, and Wen-Chih Peng</p>
             </article>
 
-            <article class="publication-card reveal">
-              <figure class="publication-media publication-media-vision">
-                <div class="publication-placeholder" role="img" aria-label="Reserved image area for the AI-generated image detection publication">
-                  <span>Paper visual</span>
-                  <strong>AI Image Detection</strong>
-                  <small>16:9 artwork reserved</small>
-                </div>
-              </figure>
-              <div class="publication-body">
-                <div class="publication-meta">
-                  <span class="venue-pill">AAAI '25</span>
-                  <span>Defactify Workshop</span>
-                </div>
-                <h3>Robust Detection and Source Identification of AI-Generated Images Using CNN and CLIP-Based Models</h3>
-                <p class="publication-authors">Tsan-Tsung Yang, I-Wei Chen, <u>Kuan-Ting Chen</u>, Shang-Hsuan Chiang, and Wen-Chih Peng</p>
-                <p>
-                  Robust AI-generated image detection and source identification using complementary CNN and
-                  CLIP-based models.
-                </p>
-                <div class="card-actions">
-                  <a href="https://arxiv.org/pdf/2503.10718" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/uuugaga/Defactify_4" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a>
-                </div>
+            <article class="publication-item reveal">
+              <div class="publication-meta">
+                <span class="venue-pill">AAAI '25</span>
+                <span>Defactify Workshop</span>
+              </div>
+              <h3>Robust Detection and Source Identification of AI-Generated Images Using CNN and CLIP-Based Models</h3>
+              <p class="publication-authors">Tsan-Tsung Yang, I-Wei Chen, <u>Kuan-Ting Chen</u>, Shang-Hsuan Chiang, and Wen-Chih Peng</p>
+              <div class="publication-links">
+                <a href="https://arxiv.org/pdf/2503.10718" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/uuugaga/Defactify_4" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>
@@ -452,16 +484,49 @@
 
           <div class="award-list">
             <article class="award-row reveal">
-              <span class="award-year">2024</span>
-              <div><h3>College Student Research Creativity Award</h3><p>Awarded to approximately 5% of participating college students.</p></div>
+              <span class="award-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 2h10v5a5 5 0 0 1-10 0V2ZM3 5h4v2H5a4 4 0 0 0 4 4v2a6 6 0 0 1-6-6V5ZM17 5h4v2a6 6 0 0 1-6 6v-2a4 4 0 0 0 4-4h-2V5ZM11 12h2v4h3v2H8v-2h3v-4Z"></path></svg>
+              </span>
+              <div class="award-content">
+                <div class="award-headline">
+                  <div class="award-title"><span class="award-rank">Top 5%</span><h3>College Student Research Creativity Award</h3></div>
+                  <time class="award-date" datetime="2024-07">Jul. 2024</time>
+                </div>
+                <div class="award-details">
+                  <p>Awarded to approximately 5% of participants.</p>
+                  <div class="award-links"><a href="https://github.com/larrychen20011120/hateful-meme-project" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+                </div>
+              </div>
             </article>
             <article class="award-row reveal">
-              <span class="award-year">2024</span>
-              <div><h3>AI Cup Factual Text Retrieval and Verification · Honorable Mention</h3><p>Ranked 13th out of 301 teams.</p></div>
+              <span class="award-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 2h10v5a5 5 0 0 1-10 0V2ZM3 5h4v2H5a4 4 0 0 0 4 4v2a6 6 0 0 1-6-6V5ZM17 5h4v2a6 6 0 0 1-6 6v-2a4 4 0 0 0 4-4h-2V5ZM11 12h2v4h3v2H8v-2h3v-4Z"></path></svg>
+              </span>
+              <div class="award-content">
+                <div class="award-headline">
+                  <div class="award-title"><span class="award-rank">Honorable Mention</span><h3>AI Cup 2023 Factual Text Retrieval and Verification</h3></div>
+                  <time class="award-date" datetime="2024-03">Mar. 2024</time>
+                </div>
+                <div class="award-details">
+                  <p>Ranked 13th out of 301 teams.</p>
+                  <div class="award-links"><a href="https://github.com/larrychen20011120/aicup_fact_verification" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+                </div>
+              </div>
             </article>
             <article class="award-row reveal">
-              <span class="award-year">2022</span>
-              <div><h3>Meichu Hackathon Hacker Group · Second Place</h3><p>TSMC real-time safety monitoring challenge.</p></div>
+              <span class="award-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 2h10v5a5 5 0 0 1-10 0V2ZM3 5h4v2H5a4 4 0 0 0 4 4v2a6 6 0 0 1-6-6V5ZM17 5h4v2a6 6 0 0 1-6 6v-2a4 4 0 0 0 4-4h-2V5ZM11 12h2v4h3v2H8v-2h3v-4Z"></path></svg>
+              </span>
+              <div class="award-content">
+                <div class="award-headline">
+                  <div class="award-title"><span class="award-rank">2nd Place</span><h3>Meichu Hackathon Hacker Group</h3></div>
+                  <time class="award-date" datetime="2022-10">Oct. 2022</time>
+                </div>
+                <div class="award-details">
+                  <p>Built and deployed the end-to-end prototype during a two-day hackathon sprint.</p>
+                  <div class="award-links"><a href="https://github.com/larrychen20011120/tsmc-hackathon" target="_blank" rel="noreferrer">Code <span aria-hidden="true">↗</span></a></div>
+                </div>
+              </div>
             </article>
           </div>
         </section>
@@ -473,9 +538,8 @@
           </header>
 
           <dl class="skills-list reveal">
-            <div><dt>Programming</dt><dd>Python, C++, JavaScript</dd></div>
-            <div><dt>AI / ML</dt><dd>PyTorch, AI Agents, RAG, Reinforcement Learning, Computer Vision</dd></div>
-            <div><dt>Tools</dt><dd>Git, VS Code, OpenCode, vLLM</dd></div>
+            <div><dt>Proficient</dt><dd>Python, PyTorch, Agentic AI, NLP, Reinforcement Learning, Machine Learning, vLLM</dd></div>
+            <div><dt>Familiar</dt><dd>C++, Computer Vision, Parallel Programming, Graph Neural Networks, CI/CD</dd></div>
             <div><dt>Languages</dt><dd>Mandarin (Native), English (Fluent, TOEIC 800)</dd></div>
           </dl>
         </section>

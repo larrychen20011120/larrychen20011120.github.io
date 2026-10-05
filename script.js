@@ -6,6 +6,8 @@ const navigation = document.querySelector('[data-nav]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const typingText = document.querySelector('[data-typing-text]');
 const entryLoader = document.querySelector('[data-entry-loader]');
+const profileToggle = document.querySelector('[data-profile-toggle]');
+const profilePhoto = document.querySelector('[data-profile-photo]');
 
 function updateTheme(theme) {
   const isDark = theme === 'dark';
@@ -30,6 +32,28 @@ if (entryLoader) {
   }
 } else {
   root.classList.remove('is-loading');
+}
+
+if (profileToggle && profilePhoto) {
+  function enableProfilePhoto() {
+    profileToggle.disabled = false;
+    profileToggle.classList.add('has-profile-photo');
+    profileToggle.setAttribute('aria-label', 'Show Kuan-Ting Chen profile photo');
+  }
+
+  if (profilePhoto.complete && profilePhoto.naturalWidth > 0) enableProfilePhoto();
+  else profilePhoto.addEventListener('load', enableProfilePhoto, { once: true });
+
+  profileToggle.addEventListener('click', () => {
+    if (!profileToggle.classList.contains('has-profile-photo')) return;
+
+    const isFlipped = profileToggle.classList.toggle('is-flipped');
+    profileToggle.setAttribute('aria-pressed', String(isFlipped));
+    profileToggle.setAttribute(
+      'aria-label',
+      isFlipped ? 'Show Pikachu avatar' : 'Show Kuan-Ting Chen profile photo'
+    );
+  });
 }
 
 themeToggle.addEventListener('click', () => {
@@ -112,7 +136,15 @@ if ('IntersectionObserver' in window) {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
-const typingPhrases = ['sports intelligence', 'LLM agents', 'tactical simulation'];
+const typingPhrases = [
+  'agentic AI',
+  'Hermes Agent',
+  'data mining',
+  'large language models',
+  'reinforcement learning',
+  'AI applications in finance',
+  'data science competitions'
+];
 
 if (typingText) {
   if (reduceMotion.matches) {
