@@ -137,13 +137,10 @@ if ('IntersectionObserver' in window) {
 }
 
 const typingPhrases = [
-  'agentic AI',
-  'Hermes Agent',
-  'data mining',
-  'large language models',
-  'reinforcement learning',
-  'AI applications in finance',
-  'data science competitions'
+  'AI/ML Enthusiast',
+  'Data Competition',
+  'Sport Analytics',
+  'LLM Researcher'
 ];
 
 if (typingText) {

@@ -26,7 +26,7 @@
 | 翻面頭貼 | `static/profile.jpg`、`.profile-photo` |
 | Email、GitHub、LinkedIn、履歷連結 | `.profile-links` |
 | 自我介紹與研究方向 | `<section ... id="about">` |
-| 個人興趣與近期目標 | `.about-more` |
+| 個人興趣 | `.about-more` |
 | 首頁動態研究關鍵字 | `script.js` 中的 `typingPhrases` |
 | 研究領域 tags | `.interest-row` |
 | 工作經歷 | `<section ... id="experience">` |
@@ -76,17 +76,17 @@
 
 ```js
 const typingPhrases = [
-  'agentic AI',
-  'data mining',
-  'new research topic',
-  'data science competitions'
+  'AI/ML Enthusiast',
+  'Data Competition',
+  'Sport Analytics',
+  'LLM Researcher'
 ];
 ```
 
 同時更新 `index.html` 中緊接在 `.typing-kicker` 後面的無障礙說明：
 
 ```html
-<p class="sr-only">Current research focuses include ...</p>
+<p class="sr-only">Keywords: ...</p>
 ```
 
 ### 4. SEO 與 PDF 履歷
@@ -98,29 +98,23 @@ const typingPhrases = [
 - `latex/resume.tex` Education 內的 `Research:`
 - `latex/resume.tex` 的 `Technical Skills`
 
-## 更新個人興趣與近期目標
+## 更新個人興趣
 
-在 About section 搜尋 `.about-more`。左欄 `.about-more-block` 是研究以外的
-興趣，右欄是目前目標：
+在 About section 搜尋 `.about-more`，更新研究以外的興趣：
 
 ```html
 <div class="about-more">
   <div class="about-more-block">
     <h3>Beyond research</h3>
-    <p>Movies, coding, table tennis, swimming, and mathematics.</p>
-  </div>
-  <div class="about-more-block">
-    <h3>Current goals</h3>
-    <ul>
-      <li>Complete my master's degree.</li>
-      <li>Build a substantial project.</li>
-      <li>Publish research at a top-tier conference.</li>
+    <ul class="personal-interests" aria-label="Personal interests">
+      <li>ICON + <span>Movies</span></li>
+      <li>ICON + <span>Table tennis</span></li>
     </ul>
   </div>
 </div>
 ```
 
-興趣請維持一句簡短文字；目標可新增或刪除 `<li>`，建議保留 2 至 4 項。
+每個興趣使用一個 `<li>`，並搭配內嵌 SVG icon。
 
 ## 新增 Publication
 

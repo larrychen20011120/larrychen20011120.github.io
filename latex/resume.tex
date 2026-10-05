@@ -135,11 +135,11 @@
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}\vspace{-2pt}}
 \newcommand{\resumeItemListStart}{%
-  \begin{itemize}[leftmargin=1.5em,label=\textcolor{metared}{\raisebox{0.2ex}{\scriptsize$\bullet$}},itemsep=0.7pt,topsep=3.5pt,parsep=0pt,partopsep=0pt]
+  \begin{itemize}[leftmargin=1.5em,label=\textcolor{metared}{\raisebox{0.2ex}{\scriptsize$\bullet$}},itemsep=0.7pt,topsep=3pt,parsep=0pt,partopsep=0pt]
   \small
 }
 \newcommand{\resumeItem}[1]{\item #1}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1.3pt}}
 
 \begin{document}
 
@@ -154,7 +154,7 @@
   \enspace\textcolor{rulegray}{|}\enspace
   \resumeHeaderLink{https://github.com/larrychen20011120}{\resumeIcon{github}\hspace{0.3em}larrychen20011120}
   \enspace\textcolor{rulegray}{|}\enspace
-  \resumeHeaderLink{https://larrychen20011120.github.io/}{\resumeIcon{home}\hspace{0.3em}HomePage}
+  \resumeHeaderLink{https://larrychen20011120.github.io/}{\resumeIcon{home}\hspace{0.3em}larrychen20011120.github.io}
 \end{center}
 \vspace{-5pt}
 
@@ -167,8 +167,7 @@
     {2024/09 \textendash{} Present}
   \resumeItemListStart
     \resumeItem{Research: Sports Analytics, Large Language Models, and Reinforcement Learning}
-    \resumeItem{\textbf{\textcolor{titletext}{Member, The Phi Tau Phi Scholastic Honor Society}}}
-    \resumeItem{GPA: 4.3/4.3; 2 Academic Excellence Awards; 2 publications; AAAI Student Volunteer}
+    \resumeItem{GPA: 4.3/4.3; 2 Academic Excellence Awards; 2 publications; Member, The \textbf{\textcolor{titletext}{Phi Tau Phi }}Scholastic Honor Society}
   \resumeItemListEnd
   \vspace{-4pt}
 
@@ -186,14 +185,14 @@
 \section{Experience}
 \resumeHeadingListStart
   \resumeExperience
-    {Student Project Lead,}
+    {Student Project Coordinator,}
     {Precision Sports Science Research Project}
     {https://sites.google.com/nycu.edu.tw/coachai-version1/home}
     {2025/05 \textendash{} 2026/09}
   \resumeItemListStart
-    \resumeItem{Coordinated 5 subprojects as the student lead, managing cross-team integration, meetings, and demonstrations.}
-    \resumeItem{Developed \textbf{\textcolor{titletext}{CoachAI+}} badminton environment and \textbf{\textcolor{titletext}{BadmintonTwin}}, and contributed to \textbf{\textcolor{titletext}{BadmintonReels}}.}
-    \resumeItem{Currently helping develop \textbf{\textcolor{titletext}{BadmintonGPT}} by turning subproject functions into MCP tools for a unified AI assistant.}
+    \resumeItem{Coordinated integration across 5 subprojects, preparing 3 consolidated reports and facilitating 2 project demos.}
+    \resumeItem{Developed \textbf{\textcolor{titletext}{BadmintonTwin}}; co-developed the \textbf{\textcolor{titletext}{CoachAI+}} badminton environment and \textbf{\textcolor{titletext}{BadmintonReels}}, a system that automatically generates narrative video highlights from badminton match video.}
+    \resumeItem{Supported \textbf{\textcolor{titletext}{BadmintonGPT}} development by converting 4 subprojects' functions into 4 MCP tools}
   \resumeItemListEnd
 \resumeHeadingListEnd
 
@@ -206,6 +205,7 @@
   \resumeItemListStart
     \resumeItem{Developed a multi-agent LLM framework for controllable, player-specific badminton rally simulation.}
     \resumeItem{Built a hybrid RAG pipeline combining physical-state retrieval and semantic contextual memory from historical rallies.}
+    \resumeItem{Achieved best overall simulation fidelity among 7 baselines across landing, movement, and shot-type metrics on ShuttleSet Series; expert evaluation further confirmed strong tactical alignment and realism of generated rallies.}
   \resumeItemListEnd
   \resumeSkills{Large Language Models · Retrieval-Augmented Generation · AI Agents · Imitation Learning}
   
@@ -222,8 +222,7 @@
     {Medical Conversation Analysis System}
     {\resumeCode{https://github.com/larrychen20011120/inquiry_analysis/}}
   \resumeItemListStart
-    \resumeItem{Built a pipeline integrating speaker diarization and Azure ASR to generate doctor-patient consultation transcripts.}
-    \resumeItem{Developed separate web and analysis servers, using medical NER to extract key medical terms and provide physicians with consultation transcripts and analysis results.}
+    \resumeItem{Built a dual-server pipeline leveraging speaker diarization, Azure ASR, and medical NER to automatically generate doctor-patient transcripts and extract key clinical terms for physician review.}
   \resumeItemListEnd
   \resumeSkills{Python · Flask · SQL · Speaker Diarization · Azure Speech Services · Named Entity Recognition}
 \end{itemize}\vspace{-2pt}
@@ -259,7 +258,7 @@
   {2022/10}
   {https://github.com/larrychen20011120/tsmc-hackathon}
    \resumeItemListStart
-    \resumeItem{Applied transfer learning to YOLOv7 with strong data augmentation and multi-stage training, then deployed real-time inference on laptops and Raspberry Pi with REST API integration.}
+    \resumeItem{Co-developed the prototype within a 48-hour hackathon. Finetuned YOLOv7 with transfer learning and strong data augmentation, then deployed real-time inference on laptops and Raspberry Pi with REST API integration.}
   \resumeItemListEnd
   
   % \resumeSkills{YOLOv7 · Data Augmentation · Object Detection · Transfer Learning · Raspberry Pi}
@@ -269,8 +268,8 @@
 \small
 \textbf{\textcolor{titletext}{Proficient:}} Python, PyTorch, Agentic AI, NLP, Reinforcement Learning, Machine Learning, vLLM
 \par\vspace{0.5pt}
-\textbf{\textcolor{titletext}{Familiar:}} C++, Computer Vision, Parallel Programming, Graph Neural Networks, CI/CD
+\textbf{\textcolor{titletext}{Familiar:}} C++, Linux, Computer Vision, Parallel Programming, Graph Neural Networks, CI/CD
 \par\vspace{0.5pt}
-\textbf{\textcolor{titletext}{Languages:}} Mandarin (Native), English (Fluent; TOEIC: 800)
+\textbf{\textcolor{titletext}{Languages:}} Mandarin (Native), English (Upper-intermediate; TOEIC: 800)
 
 \end{document}
